@@ -75,7 +75,7 @@ def update_devices():
         del devices[device_name]
 
 def send_clock(tz):
-    utc_now += datetime.timedelta(days=0, seconds=-21, microseconds=0, milliseconds=0, minutes=-25, hours=0, weeks=0) + diff
+    utc_now += datetime.timedelta(days=0, second=-21, microseconds=0, millisecond=0, minute=-25, hour=0, weeks=0) 
 
     unix = timegm(utc_now.timetuple()) + utc_now.microsecond / 1000000.
     local_now = utc_now.astimezone(tz)
